@@ -15,6 +15,14 @@
 		DD7DCA882440CF9400AD4D15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD7DCA862440CF9400AD4D15 /* LaunchScreen.storyboard */; };
 		DD7DCA932440CF9400AD4D15 /* VensTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7DCA922440CF9400AD4D15 /* VensTests.swift */; };
 		DD7DCA9E2440CF9400AD4D15 /* VensUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7DCA9D2440CF9400AD4D15 /* VensUITests.swift */; };
+		DDE479752440D2B7006B1208 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE479742440D2B7006B1208 /* Shop.swift */; };
+		DDE479782440D3B5006B1208 /* Shops_BCN.json in Resources */ = {isa = PBXBuildFile; fileRef = DDE479772440D3B5006B1208 /* Shops_BCN.json */; };
+		DDE4797B2440D3EE006B1208 /* ShopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE4797A2440D3EE006B1208 /* ShopRow.swift */; };
+		DDE4797D2440D4DE006B1208 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE4797C2440D4DE006B1208 /* Data.swift */; };
+		DDE4797F2440D5B3006B1208 /* ShopList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE4797E2440D5B3006B1208 /* ShopList.swift */; };
+		DDE479812440D67D006B1208 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDE479802440D67D006B1208 /* Localizable.strings */; };
+		DDE479842440D73F006B1208 /* ShopDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE479832440D73F006B1208 /* ShopDetail.swift */; };
+		DDE4798A2440DCCB006B1208 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE479892440DCCB006B1208 /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		DD7DCA992440CF9400AD4D15 /* VensUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VensUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7DCA9D2440CF9400AD4D15 /* VensUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VensUITests.swift; sourceTree = "<group>"; };
 		DD7DCA9F2440CF9400AD4D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDE479742440D2B7006B1208 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		DDE479772440D3B5006B1208 /* Shops_BCN.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Shops_BCN.json; sourceTree = "<group>"; };
+		DDE4797A2440D3EE006B1208 /* ShopRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopRow.swift; sourceTree = "<group>"; };
+		DDE4797C2440D4DE006B1208 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		DDE4797E2440D5B3006B1208 /* ShopList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopList.swift; sourceTree = "<group>"; };
+		DDE479802440D67D006B1208 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		DDE479832440D73F006B1208 /* ShopDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetail.swift; sourceTree = "<group>"; };
+		DDE479892440DCCB006B1208 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,9 @@
 		DD7DCA7A2440CF9100AD4D15 /* Vens */ = {
 			isa = PBXGroup;
 			children = (
+				DDE479762440D393006B1208 /* Resources */,
+				DDE479712440D29D006B1208 /* Model */,
+				DDE479702440D285006B1208 /* Features */,
 				DD7DCA7B2440CF9100AD4D15 /* AppDelegate.swift */,
 				DD7DCA7D2440CF9100AD4D15 /* SceneDelegate.swift */,
 				DD7DCA7F2440CF9100AD4D15 /* ContentView.swift */,
@@ -134,6 +153,51 @@
 				DD7DCA9F2440CF9400AD4D15 /* Info.plist */,
 			);
 			path = VensUITests;
+			sourceTree = "<group>";
+		};
+		DDE479702440D285006B1208 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				DDE479822440D732006B1208 /* Detail */,
+				DDE479792440D3DB006B1208 /* List */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		DDE479712440D29D006B1208 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DDE479742440D2B7006B1208 /* Shop.swift */,
+				DDE4797C2440D4DE006B1208 /* Data.swift */,
+				DDE479892440DCCB006B1208 /* UserData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DDE479762440D393006B1208 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DDE479772440D3B5006B1208 /* Shops_BCN.json */,
+				DDE479802440D67D006B1208 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DDE479792440D3DB006B1208 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				DDE4797A2440D3EE006B1208 /* ShopRow.swift */,
+				DDE4797E2440D5B3006B1208 /* ShopList.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		DDE479822440D732006B1208 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				DDE479832440D73F006B1208 /* ShopDetail.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +304,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDE479812440D67D006B1208 /* Localizable.strings in Resources */,
 				DD7DCA882440CF9400AD4D15 /* LaunchScreen.storyboard in Resources */,
+				DDE479782440D3B5006B1208 /* Shops_BCN.json in Resources */,
 				DD7DCA852440CF9400AD4D15 /* Preview Assets.xcassets in Resources */,
 				DD7DCA822440CF9400AD4D15 /* Assets.xcassets in Resources */,
 			);
@@ -267,9 +333,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDE479842440D73F006B1208 /* ShopDetail.swift in Sources */,
 				DD7DCA7C2440CF9100AD4D15 /* AppDelegate.swift in Sources */,
+				DDE4797F2440D5B3006B1208 /* ShopList.swift in Sources */,
+				DDE4798A2440DCCB006B1208 /* UserData.swift in Sources */,
+				DDE4797D2440D4DE006B1208 /* Data.swift in Sources */,
 				DD7DCA7E2440CF9100AD4D15 /* SceneDelegate.swift in Sources */,
 				DD7DCA802440CF9100AD4D15 /* ContentView.swift in Sources */,
+				DDE4797B2440D3EE006B1208 /* ShopRow.swift in Sources */,
+				DDE479752440D2B7006B1208 /* Shop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
