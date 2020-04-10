@@ -21,7 +21,9 @@ struct ContentView: View {
                     }
                 }
                 .tag(0)
-            Text("Second View")
+            ShopsMapView()
+                .edgesIgnoringSafeArea(.top)
+                
                 .font(.title)
                 .tabItem {
                     VStack {
