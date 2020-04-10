@@ -9,6 +9,8 @@
 import Foundation
 
 let shopData: [Shop] = load("Shops_BCN.json")
+let carouselData: [CarouselCard] = [CarouselCard(id: 1, imageName: "first", title: "Test title", text: "Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal "),
+CarouselCard(id: 2, imageName: "second", title: "Test title 2", text: "Adeu! ")]
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

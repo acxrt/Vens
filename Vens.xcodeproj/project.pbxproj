@@ -30,6 +30,11 @@
 		DDE479A424411EA3006B1208 /* VAGRoundedStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDE479A224411EA3006B1208 /* VAGRoundedStd-Bold.otf */; };
 		DDE479A524411EA3006B1208 /* VAGRoundedStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDE479A324411EA3006B1208 /* VAGRoundedStd-Light.otf */; };
 		DDE479A8244122AF006B1208 /* TextModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE479A7244122AF006B1208 /* TextModifiers.swift */; };
+		DDE479AB2441259C006B1208 /* CarouselPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE479AA2441259C006B1208 /* CarouselPageViewController.swift */; };
+		DDE479AD244125EE006B1208 /* CarouselPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE479AC244125EE006B1208 /* CarouselPageView.swift */; };
+		DDE479AF24412714006B1208 /* CarouselCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE479AE24412714006B1208 /* CarouselCardView.swift */; };
+		DDE479B32441279C006B1208 /* CarouselCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE479B22441279C006B1208 /* CarouselCard.swift */; };
+		DDE479B524412D7F006B1208 /* CarouselPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE479B424412D7F006B1208 /* CarouselPageControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +88,11 @@
 		DDE479A224411EA3006B1208 /* VAGRoundedStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VAGRoundedStd-Bold.otf"; sourceTree = "<group>"; };
 		DDE479A324411EA3006B1208 /* VAGRoundedStd-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VAGRoundedStd-Light.otf"; sourceTree = "<group>"; };
 		DDE479A7244122AF006B1208 /* TextModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifiers.swift; sourceTree = "<group>"; };
+		DDE479AA2441259C006B1208 /* CarouselPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselPageViewController.swift; sourceTree = "<group>"; };
+		DDE479AC244125EE006B1208 /* CarouselPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselPageView.swift; sourceTree = "<group>"; };
+		DDE479AE24412714006B1208 /* CarouselCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCardView.swift; sourceTree = "<group>"; };
+		DDE479B22441279C006B1208 /* CarouselCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCard.swift; sourceTree = "<group>"; };
+		DDE479B424412D7F006B1208 /* CarouselPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselPageControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				DDE479762440D393006B1208 /* Resources */,
-				DDE479712440D29D006B1208 /* Model */,
+				DDE479712440D29D006B1208 /* Models */,
 				DDE479702440D285006B1208 /* Features */,
 				DD7DCA7B2440CF9100AD4D15 /* AppDelegate.swift */,
 				DD7DCA7D2440CF9100AD4D15 /* SceneDelegate.swift */,
@@ -176,6 +186,7 @@
 		DDE479702440D285006B1208 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				DDE479A92441255F006B1208 /* InitialCarousel */,
 				DDE47999244109E8006B1208 /* FiltersView */,
 				DDE479942441048E006B1208 /* Map */,
 				DDE479822440D732006B1208 /* Detail */,
@@ -184,14 +195,15 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
-		DDE479712440D29D006B1208 /* Model */ = {
+		DDE479712440D29D006B1208 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				DDE479742440D2B7006B1208 /* Shop.swift */,
 				DDE4797C2440D4DE006B1208 /* Data.swift */,
 				DDE479892440DCCB006B1208 /* UserData.swift */,
+				DDE479B22441279C006B1208 /* CarouselCard.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DDE479762440D393006B1208 /* Resources */ = {
@@ -247,6 +259,17 @@
 				DDE479A324411EA3006B1208 /* VAGRoundedStd-Light.otf */,
 			);
 			path = FontFiles;
+			sourceTree = "<group>";
+		};
+		DDE479A92441255F006B1208 /* InitialCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				DDE479AA2441259C006B1208 /* CarouselPageViewController.swift */,
+				DDE479AC244125EE006B1208 /* CarouselPageView.swift */,
+				DDE479AE24412714006B1208 /* CarouselCardView.swift */,
+				DDE479B424412D7F006B1208 /* CarouselPageControl.swift */,
+			);
+			path = InitialCarousel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,15 +410,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDE479842440D73F006B1208 /* ShopDetail.swift in Sources */,
+				DDE479B32441279C006B1208 /* CarouselCard.swift in Sources */,
 				DDE479A8244122AF006B1208 /* TextModifiers.swift in Sources */,
 				DD7DCA7C2440CF9100AD4D15 /* AppDelegate.swift in Sources */,
 				DDE4797F2440D5B3006B1208 /* ShopList.swift in Sources */,
+				DDE479AB2441259C006B1208 /* CarouselPageViewController.swift in Sources */,
 				DDE4798A2440DCCB006B1208 /* UserData.swift in Sources */,
 				DDE4799B244109F4006B1208 /* FiltersView.swift in Sources */,
+				DDE479AF24412714006B1208 /* CarouselCardView.swift in Sources */,
+				DDE479AD244125EE006B1208 /* CarouselPageView.swift in Sources */,
 				DDE4797D2440D4DE006B1208 /* Data.swift in Sources */,
 				DD7DCA7E2440CF9100AD4D15 /* SceneDelegate.swift in Sources */,
 				DD7DCA802440CF9100AD4D15 /* ContentView.swift in Sources */,
 				DDE4799F24411BC6006B1208 /* Colors.swift in Sources */,
+				DDE479B524412D7F006B1208 /* CarouselPageControl.swift in Sources */,
 				DDE4799624410499006B1208 /* MapView.swift in Sources */,
 				DDE4799824410907006B1208 /* ShopsMapView.swift in Sources */,
 				DDE4797B2440D3EE006B1208 /* ShopRow.swift in Sources */,
