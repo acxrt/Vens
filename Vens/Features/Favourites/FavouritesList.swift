@@ -15,14 +15,15 @@ struct FavouritesList: View {
         
         NavigationView {
             if hasFavourites() {
-            List(userData.shops) { shop in
-                if shop.isFavourite ?? false {
-                    NavigationLink(destination: ShopDetail(shop: shop)) {
-                        ShopRow(shop: shop)
+                List(userData.shops.filter({$0.isFavourite ?? false})) { shop in
+                    if shop.isFavourite ?? false {
+                        NavigationLink(destination: ShopDetail(shop: shop)) {
+                            ShopRow(shop: shop)
+                        }
                     }
                 }
-            }
-            .navigationBarTitle("favourites")
+                .navigationBarTitle("favourites")
+                Spacer()
             } else {
                 VStack(spacing: 20){
                     Image("first")
