@@ -17,6 +17,8 @@ extension Color {
     public static let vensYellow = Color(red: 253/255, green: 197/255, blue: 16/255)
     public static let vensTextColor = Color(red: 3/255, green: 11/255, blue: 55/255, opacity: 0.42)
     
+    public static let vensScreenBackgroundColor = Color(red: 251, green: 251, blue: 255)
+    
     func asUIColor() -> UIColor {
 
         let components = self.components()

@@ -11,6 +11,11 @@ import SwiftUI
 struct ContentView: View {
     @State private var selection = 0
     
+    init() {
+        UITabBar.appearance().tintColor = Color.vensLightPurple.asUIColor()
+    }
+
+    
     var body: some View {
         
         TabView(selection: $selection){
@@ -18,7 +23,10 @@ struct ContentView: View {
                 .font(.title)
                 .tabItem {
                     VStack {
-                        Image("first")
+                        Image("listIcon")
+                        .resizable()
+                        .frame(width: 12, height: 12)
+                        .aspectRatio(contentMode: .fit)
                     }
                 }
                 .tag(0)
@@ -28,7 +36,10 @@ struct ContentView: View {
                 .font(.title)
                 .tabItem {
                     VStack {
-                        Image("second")
+                        Image("locationIcon")
+                        .resizable()
+                        .frame(width: 12, height: 12)
+                        .aspectRatio(contentMode: .fit)
                     }
                 }
                 .tag(1)
@@ -36,11 +47,14 @@ struct ContentView: View {
             .font(.title)
             .tabItem {
                 VStack {
-                    Image("second")
+                    Image("favouriteIcon")
+                    .resizable()
+                    .frame(width: 12, height: 12)
+                    .aspectRatio(contentMode: .fit)
                 }
             }
             .tag(2)
-        }
+        }.accentColor(Color.vensDarkPurple)
     }
 }
 

@@ -31,7 +31,7 @@ struct Shop: Hashable, Codable, Identifiable {
     }
     
     var isOpen: Bool? {
-        return Bool.random()
+        return (id%3 != 0)
     }
     
     func openStatusLocalized() -> String {

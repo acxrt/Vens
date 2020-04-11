@@ -17,11 +17,16 @@ struct ShopList: View {
         NavigationView {
             List(userData.shops) { shop in
                 if !self.userData.showOpenShopsOnly || (shop.isOpen ?? false) {
-                    NavigationLink(destination: ShopDetail(shop: shop)) {
+                    
+                    ZStack {
                         ShopRow(shop: shop)
+                        NavigationLink(destination: ShopDetail(shop: shop)) {
+                                EmptyView()
+                        }.buttonStyle(PlainButtonStyle())
                     }
                 }
             }
+            .listSeparatorStyleNone()
             .navigationBarTitle("shops")
         }
     }

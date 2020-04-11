@@ -25,10 +25,16 @@ struct FavouritesList: View {
                 .navigationBarTitle("favourites")
                 Spacer()
             } else {
-                VStack(spacing: 20){
-                    Image("first")
-                    Text("emptyFavsTitle").modifier(TitleLabel())
+                VStack(spacing: 45){
+                    Image("noFavourites")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: nil, height: 300.0)
+                        
+                    VStack (spacing: 15){ Text("emptyFavsTitle").modifier(TitleLabel())
                     Text("emptyFavsText").modifier(TextLabel())
+                    }
+                    
                 }.navigationBarTitle("favourites")
                     .padding(.vertical, 30)
                     .padding(.horizontal, 40)

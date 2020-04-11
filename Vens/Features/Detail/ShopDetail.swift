@@ -38,12 +38,17 @@ struct ShopDetail: View {
                         Circle().foregroundColor(Color.vensYellow)
                         
                         if self.userData.shops[self.shopIndex].isFavourite ?? false {
-                            Image(systemName: "star.fill").foregroundColor(Color.white)
-                                .frame(width: 50, height: 50)
+                            Image("favouriteIcon")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 25, height: 25)
                             
                         } else {
-                            Image(systemName: "star").foregroundColor(Color.white)
-                                .frame(width: 50, height: 50)
+                            Image("favouriteIcon")
+                                .resizable()
+                                .renderingMode(.template)
+                               .aspectRatio(contentMode: .fit) .foregroundColor(Color.vensDarkPurple)
+                                .frame(width: 25, height: 25)
                         }
                     }.frame(width: 50, height: 50)
                         .offset(x: 0, y: -50)
@@ -84,14 +89,20 @@ struct ShopDetail: View {
                 }
                 
                 VStack(alignment: .leading) {
-                    HStack(alignment: .top) {
-                        Image("first")
+                    HStack(alignment: .center) {
+                        Image("locationIcon")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 15, height: 15)
                         Text(shop.distanceToMe())
                             .modifier(TextLabel())
                     }
                     if shop.phone != nil {
-                        HStack(alignment: .top) {
-                            Image("first")
+                        HStack(alignment: .center) {
+                            Image("phoneIcon")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 15, height: 15)
                             
                             Button(action: {
                                 
@@ -115,25 +126,23 @@ struct ShopDetail: View {
                         }
                     }
                     if shop.web != nil {
-                        HStack(alignment: .top) {
-                            Image("first")
+                        HStack(alignment: .center) {
+                            Image("webIcon")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 15, height: 15)
                             
                             Button(action: {
-                                
                                 if let url = URL(string: self.shop.web ?? "") as NSURL? {
                                     UIApplication.shared.open(url as URL)
                                 }
-                                
                             }) {
                                 Text(shop.web ?? "")
                                     .modifier(TextLabel())
                             }
-                            
-                            
                         }
                     }
                 }
-                
             }
             .offset(x: 0, y: -50)
             .padding(.top)
