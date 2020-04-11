@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD3615CB2441E23500ECB0A9 /* FavouritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3615CA2441E23500ECB0A9 /* FavouritesList.swift */; };
+		DD3615CD2441E57B00ECB0A9 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD3615CC2441E57B00ECB0A9 /* OpenSans-Regular.ttf */; };
+		DD3615D1244221D800ECB0A9 /* Shops_BCN.json in Resources */ = {isa = PBXBuildFile; fileRef = DD3615D0244221D700ECB0A9 /* Shops_BCN.json */; };
 		DD7DCA7C2440CF9100AD4D15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7DCA7B2440CF9100AD4D15 /* AppDelegate.swift */; };
 		DD7DCA7E2440CF9100AD4D15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7DCA7D2440CF9100AD4D15 /* SceneDelegate.swift */; };
 		DD7DCA802440CF9100AD4D15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7DCA7F2440CF9100AD4D15 /* ContentView.swift */; };
@@ -16,7 +19,6 @@
 		DD7DCA932440CF9400AD4D15 /* VensTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7DCA922440CF9400AD4D15 /* VensTests.swift */; };
 		DD7DCA9E2440CF9400AD4D15 /* VensUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7DCA9D2440CF9400AD4D15 /* VensUITests.swift */; };
 		DDE479752440D2B7006B1208 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE479742440D2B7006B1208 /* Shop.swift */; };
-		DDE479782440D3B5006B1208 /* Shops_BCN.json in Resources */ = {isa = PBXBuildFile; fileRef = DDE479772440D3B5006B1208 /* Shops_BCN.json */; };
 		DDE4797B2440D3EE006B1208 /* ShopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE4797A2440D3EE006B1208 /* ShopRow.swift */; };
 		DDE4797D2440D4DE006B1208 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE4797C2440D4DE006B1208 /* Data.swift */; };
 		DDE4797F2440D5B3006B1208 /* ShopList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE4797E2440D5B3006B1208 /* ShopList.swift */; };
@@ -55,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD3615CA2441E23500ECB0A9 /* FavouritesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesList.swift; sourceTree = "<group>"; };
+		DD3615CC2441E57B00ECB0A9 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		DD3615D0244221D700ECB0A9 /* Shops_BCN.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Shops_BCN.json; sourceTree = "<group>"; };
 		DD7DCA782440CF9100AD4D15 /* Vens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7DCA7B2440CF9100AD4D15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD7DCA7D2440CF9100AD4D15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +75,6 @@
 		DD7DCA9D2440CF9400AD4D15 /* VensUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VensUITests.swift; sourceTree = "<group>"; };
 		DD7DCA9F2440CF9400AD4D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDE479742440D2B7006B1208 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
-		DDE479772440D3B5006B1208 /* Shops_BCN.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Shops_BCN.json; sourceTree = "<group>"; };
 		DDE4797A2440D3EE006B1208 /* ShopRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopRow.swift; sourceTree = "<group>"; };
 		DDE4797C2440D4DE006B1208 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		DDE4797E2440D5B3006B1208 /* ShopList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopList.swift; sourceTree = "<group>"; };
@@ -120,6 +124,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD3615C92441E22200ECB0A9 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				DD3615CA2441E23500ECB0A9 /* FavouritesList.swift */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
 		DD7DCA6F2440CF9100AD4D15 = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +198,7 @@
 		DDE479702440D285006B1208 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				DD3615C92441E22200ECB0A9 /* Favourites */,
 				DDE479A92441255F006B1208 /* InitialCarousel */,
 				DDE47999244109E8006B1208 /* FiltersView */,
 				DDE479942441048E006B1208 /* Map */,
@@ -209,8 +222,8 @@
 		DDE479762440D393006B1208 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DD3615D0244221D700ECB0A9 /* Shops_BCN.json */,
 				DDE479A624411F9E006B1208 /* FontFiles */,
-				DDE479772440D3B5006B1208 /* Shops_BCN.json */,
 				DDE479912440E7D6006B1208 /* Localizable.strings */,
 				DDE4799E24411BC6006B1208 /* Colors.swift */,
 				DDE479A7244122AF006B1208 /* TextModifiers.swift */,
@@ -255,6 +268,7 @@
 		DDE479A624411F9E006B1208 /* FontFiles */ = {
 			isa = PBXGroup;
 			children = (
+				DD3615CC2441E57B00ECB0A9 /* OpenSans-Regular.ttf */,
 				DDE479A224411EA3006B1208 /* VAGRoundedStd-Bold.otf */,
 				DDE479A324411EA3006B1208 /* VAGRoundedStd-Light.otf */,
 			);
@@ -381,9 +395,10 @@
 				DDE4798F2440E7D6006B1208 /* Localizable.strings in Resources */,
 				DDE479A424411EA3006B1208 /* VAGRoundedStd-Bold.otf in Resources */,
 				DD7DCA882440CF9400AD4D15 /* LaunchScreen.storyboard in Resources */,
-				DDE479782440D3B5006B1208 /* Shops_BCN.json in Resources */,
 				DD7DCA852440CF9400AD4D15 /* Preview Assets.xcassets in Resources */,
 				DD7DCA822440CF9400AD4D15 /* Assets.xcassets in Resources */,
+				DD3615D1244221D800ECB0A9 /* Shops_BCN.json in Resources */,
+				DD3615CD2441E57B00ECB0A9 /* OpenSans-Regular.ttf in Resources */,
 				DDE479A524411EA3006B1208 /* VAGRoundedStd-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +435,7 @@
 				DDE479AF24412714006B1208 /* CarouselCardView.swift in Sources */,
 				DDE479AD244125EE006B1208 /* CarouselPageView.swift in Sources */,
 				DDE4797D2440D4DE006B1208 /* Data.swift in Sources */,
+				DD3615CB2441E23500ECB0A9 /* FavouritesList.swift in Sources */,
 				DD7DCA7E2440CF9100AD4D15 /* SceneDelegate.swift in Sources */,
 				DD7DCA802440CF9100AD4D15 /* ContentView.swift in Sources */,
 				DDE4799F24411BC6006B1208 /* Colors.swift in Sources */,

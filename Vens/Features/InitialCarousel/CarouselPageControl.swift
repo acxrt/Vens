@@ -19,8 +19,9 @@ struct CarouselPageControl: UIViewRepresentable {
     
     func makeUIView(context: Context) -> UIPageControl {
         let control = UIPageControl()
-        control.tintColor = .red
         control.numberOfPages = numberOfPages
+        control.pageIndicatorTintColor = Color.vensLightPurple.asUIColor()
+        control.currentPageIndicatorTintColor = Color.vensMediumPurple.asUIColor()
         control.addTarget(
         context.coordinator,
         action: #selector(Coordinator.updateCurrentPage(sender:)),

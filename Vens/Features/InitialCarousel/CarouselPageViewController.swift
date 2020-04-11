@@ -49,7 +49,7 @@ struct CarouselPageViewController: UIViewControllerRepresentable {
                 return nil
             }
             if index == 0 {
-                return parent.controllers.last
+                return nil
             }
             return parent.controllers[index - 1]
         }
@@ -62,7 +62,7 @@ struct CarouselPageViewController: UIViewControllerRepresentable {
                 return nil
             }
             if index + 1 == parent.controllers.count {
-                return parent.controllers.first
+                return nil
             }
             return parent.controllers[index + 1]
         }

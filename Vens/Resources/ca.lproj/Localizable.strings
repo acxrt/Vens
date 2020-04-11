@@ -9,3 +9,20 @@
 
 "shops" = "Comerços";
 "filters" = "Filtres";
+"skip" = "Saltar";
+"favourites" = "Favorits";
+"emptyFavsTitle" = "Encara no tens favorits";
+"emptyFavsText" = "Descobreix els teus comerços favorits i guarda'ls per trobar-los fàcilment";
+"Alimentacio" = "Alimentació";
+"Quotidia" = "Quotidià";
+"OciCultura" = "Oci i cultura";
+"Galeria" = "Galeria";
+"CentreComercial" = "Centre comercial";
+"Serveis" = "Serveis";
+"Llar" = "Llar";
+"Bellesa" = "Bellesa";
+"Mercat" = "Mercat";
+"Moda" = "Moda";
+"Altres" = "Altres";
+"open" = "Obert";
+"tancat" = "Tancat";

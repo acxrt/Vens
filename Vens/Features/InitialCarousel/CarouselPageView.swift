@@ -17,16 +17,26 @@ struct CarouselPageView<Page: View>: View {
     }
     
     var body: some View {
-        VStack {
+        
+        VStack (spacing: 20) {
             CarouselPageViewController(controllers: viewControllers, currentPage: $currentPage)
             CarouselPageControl(numberOfPages: viewControllers.count, currentPage: $currentPage)
-                .padding(.trailing)
+            Spacer()
+            VStack(alignment: .trailing) {
+                HStack {
+                    Image("first")
+                    Text("skip")
+                }
+            }.frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
+                .padding(.trailing, 30)
         }
+        
     }
 }
 
 struct CarouselPageView_Previews: PreviewProvider {
     static var previews: some View {
         CarouselPageView(carouselData.map{ CarouselCardView(carouselCard: $0)} )
+        
     }
 }

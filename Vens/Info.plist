@@ -6,6 +6,7 @@
 	<array>
 		<string>VAGRoundedStd-Light.otf</string>
 		<string>VAGRoundedStd-Bold.otf</string>
+		<string>OpenSans-Regular.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

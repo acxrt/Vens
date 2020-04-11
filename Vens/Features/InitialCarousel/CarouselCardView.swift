@@ -14,14 +14,13 @@ struct CarouselCardView: View {
     var carouselCard: CarouselCard
     
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             Image(carouselCard.imageName)
             Text(carouselCard.title)
             Text(carouselCard.text)
-            
-
         }.padding(.vertical, 30)
         .padding(.horizontal, 20)
+            
     }
 }
 

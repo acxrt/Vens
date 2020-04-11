@@ -10,8 +10,9 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection = 0
- 
+    
     var body: some View {
+        
         TabView(selection: $selection){
             ShopList()
                 .font(.title)
@@ -31,6 +32,14 @@ struct ContentView: View {
                     }
                 }
                 .tag(1)
+            FavouritesList()
+            .font(.title)
+            .tabItem {
+                VStack {
+                    Image("second")
+                }
+            }
+            .tag(2)
         }
     }
 }

@@ -16,7 +16,7 @@ struct ShopList: View {
         
         NavigationView {
             List(userData.shops) { shop in
-                if !self.userData.showOpenShopsOnly || shop.isOpen {
+                if !self.userData.showOpenShopsOnly || (shop.isOpen ?? false) {
                     NavigationLink(destination: ShopDetail(shop: shop)) {
                         ShopRow(shop: shop)
                     }
