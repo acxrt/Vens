@@ -17,14 +17,15 @@ struct ShopsMapView: View {
                 VStack {
                     NavigationLink(destination: FiltersView()) {
                         
-                        HStack {
+                        HStack(alignment: .center) {
                             Text("filters")
-                                .modifier(TitleLabel())
-
+                                .modifier(TextLabel())
+                            Spacer()
                             Image("first")
                                 .font(.title)
                         }
-                        .padding()
+                        .padding(.horizontal, 15)
+                        .padding(.vertical, 5)
                         .foregroundColor(.black)
                         .background(Color.vensYellow)
                         .cornerRadius(.infinity)

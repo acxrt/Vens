@@ -74,7 +74,7 @@ struct ShopDetail: View {
                                 .padding(.horizontal, 15)
                                 .padding(.vertical, 2)
                                 .background(Color.vensLightPurple)
-                                .cornerRadius(12)
+                                .cornerRadius(.infinity)
                             
                         }
                         
