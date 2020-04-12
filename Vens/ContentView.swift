@@ -8,12 +8,14 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     @State private var selection = 0
     
+    
     init() {
         UITabBar.appearance().backgroundColor = UIColor.white
-
+        UINavigationBar.appearance().backgroundColor = UIColor.white
     }
 
     
@@ -25,17 +27,19 @@ struct ContentView: View {
                 .tabItem {
                     VStack {
                         Image("icList")
+                        .renderingMode(.template)
+                        .foregroundColor(Color.vensLightPurple)
                     }
                 }
                 .tag(0)
             ShopsMapView()
-                .edgesIgnoringSafeArea(.top)
-                
+//                .edgesIgnoringSafeArea(.top)
                 .font(.title)
                 .tabItem {
                     VStack {
-                        Image("locationIcon")
-                        .renderingMode(.template) .foregroundColor(Color.vensLightPurple)
+                        Image("location_grey")
+                        .renderingMode(.template)
+                        .foregroundColor(Color.vensLightPurple)
                     }
                 }
                 .tag(1)
@@ -43,11 +47,16 @@ struct ContentView: View {
             .font(.title)
             .tabItem {
                 VStack {
-                    Image("favouriteIcon")
+                    Image("icFavourites")
+                    .renderingMode(.template)
+                    .foregroundColor(Color.vensLightPurple)
                 }
             }
             .tag(2)
-        }.accentColor(Color.vensDarkPurple)
+            }
+            .accentColor(Color.vensDarkPurple)
+        
+        
     }
 }
 

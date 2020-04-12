@@ -38,7 +38,7 @@ struct ShopDetail: View {
                         Circle().foregroundColor(Color.vensYellow)
                         
                         if self.userData.shops[self.shopIndex].isFavourite ?? false {
-                            Image("favouriteIcon")
+                            Image("icFavourites")
                                 .resizable()
                                 .renderingMode(.template)
                                 .aspectRatio(contentMode: .fit)
@@ -46,7 +46,7 @@ struct ShopDetail: View {
                                 .frame(width: 25, height: 25)
                             
                         } else {
-                            Image("favouriteIcon")
+                            Image("icFavourites")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 25, height: 25)

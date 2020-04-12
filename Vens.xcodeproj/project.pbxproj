@@ -11,6 +11,7 @@
 		DD3615CD2441E57B00ECB0A9 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD3615CC2441E57B00ECB0A9 /* OpenSans-Regular.ttf */; };
 		DD3615D1244221D800ECB0A9 /* Shops_BCN.json in Resources */ = {isa = PBXBuildFile; fileRef = DD3615D0244221D700ECB0A9 /* Shops_BCN.json */; };
 		DD3615D3244273C800ECB0A9 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3615D2244273C800ECB0A9 /* ViewModifier.swift */; };
+		DD393D262443618800DC6273 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD393D252443618800DC6273 /* LocationManager.swift */; };
 		DD7DCA7C2440CF9100AD4D15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7DCA7B2440CF9100AD4D15 /* AppDelegate.swift */; };
 		DD7DCA7E2440CF9100AD4D15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7DCA7D2440CF9100AD4D15 /* SceneDelegate.swift */; };
 		DD7DCA802440CF9100AD4D15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7DCA7F2440CF9100AD4D15 /* ContentView.swift */; };
@@ -62,6 +63,7 @@
 		DD3615CC2441E57B00ECB0A9 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		DD3615D0244221D700ECB0A9 /* Shops_BCN.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Shops_BCN.json; sourceTree = "<group>"; };
 		DD3615D2244273C800ECB0A9 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
+		DD393D252443618800DC6273 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		DD7DCA782440CF9100AD4D15 /* Vens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7DCA7B2440CF9100AD4D15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD7DCA7D2440CF9100AD4D15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			children = (
 				DDE4799524410499006B1208 /* MapView.swift */,
 				DDE4799724410907006B1208 /* ShopsMapView.swift */,
+				DD393D252443618800DC6273 /* LocationManager.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				DD3615CB2441E23500ECB0A9 /* FavouritesList.swift in Sources */,
 				DD7DCA7E2440CF9100AD4D15 /* SceneDelegate.swift in Sources */,
 				DD7DCA802440CF9100AD4D15 /* ContentView.swift in Sources */,
+				DD393D262443618800DC6273 /* LocationManager.swift in Sources */,
 				DDE4799F24411BC6006B1208 /* Colors.swift in Sources */,
 				DDE479B524412D7F006B1208 /* CarouselPageControl.swift in Sources */,
 				DDE4799624410499006B1208 /* MapView.swift in Sources */,
@@ -638,7 +642,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ainacuxart.prov.Vens.Vens;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -658,7 +662,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ainacuxart.prov.Vens.Vens;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

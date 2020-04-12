@@ -8,6 +8,7 @@
 
 import SwiftUI
 import CoreLocation
+import MapKit
 
 struct Shop: Hashable, Codable, Identifiable {
     
@@ -49,7 +50,15 @@ struct Shop: Hashable, Codable, Identifiable {
     }
     
     func distanceToMe() -> String {
-        return "175 m"
+        return NSLocalizedString("unkownDistance", comment: "")
+    }
+    
+    var annotation: MKPointAnnotation {
+        let annot = MKPointAnnotation()
+        annot.title = self.name
+        annot.subtitle = self.category.localized()
+        annot.coordinate = self.locationCoordinate
+        return annot
     }
     
     enum Category: String {
