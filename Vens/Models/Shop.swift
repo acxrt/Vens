@@ -9,6 +9,7 @@
 import SwiftUI
 import CoreLocation
 import MapKit
+import RealmSwift
 
 struct Shop: Hashable, Codable, Identifiable {
     
@@ -19,8 +20,21 @@ struct Shop: Hashable, Codable, Identifiable {
     var type: String
     var adress: String
     var phone: String?
-    var web: String? 
+    var web: String?
+    
+//    @objc dynamic var id: Int
+//    @objc dynamic var name: String
+//    @objc dynamic var lat: Double
+//    @objc dynamic var long: Double
+//    @objc dynamic var type: String
+//    @objc dynamic var adress: String
+//    @objc dynamic var phone: String?
+//    @objc dynamic var web: String?
         
+//    override static func primaryKey() -> String? {
+//        return "id"
+//    }
+//    
     var isFavourite: Bool? = false
     
     var category: Category {

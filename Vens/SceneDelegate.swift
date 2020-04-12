@@ -23,9 +23,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create the SwiftUI view that provides the window contents.
         
         var onBoardingShowed = true
-        if UserDefaults.standard.value(forKeyPath: "onBoardingShowed") == nil || (UserDefaults.standard.value(forKeyPath: "onBoardingShowed") as? Bool) == false {
-            onBoardingShowed = false
-        }
+//        if UserDefaults.standard.value(forKeyPath: "onBoardingShowed") == nil || (UserDefaults.standard.value(forKeyPath: "onBoardingShowed") as? Bool) == false {
+//            onBoardingShowed = false
+//        }
         
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

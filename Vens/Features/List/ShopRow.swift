@@ -70,21 +70,6 @@ struct ShopRow: View {
                     Spacer()
                     
                 }
-                
-                //            if self.userData.shops[self.shopIndex].isFavourite ?? false {
-                //                Image(systemName: "star.fill")
-                //                    .imageScale(.medium)
-                //                    .onTapGesture {
-                //                        self.toggleFav()
-                //                }
-                //
-                //            } else {
-                //                Image(systemName: "star")
-                //                    .imageScale(.medium)
-                //                    .onTapGesture {
-                //                        self.toggleFav()
-                //                }
-                //            }
             }.padding(10)
                 .padding(.bottom, 12)
             
@@ -97,14 +82,6 @@ struct ShopRow: View {
             .buttonStyle(PlainButtonStyle())
             .background(Color.clear)
         
-    }
-    
-    func toggleFav() {
-        if self.userData.shops[self.shopIndex].isFavourite == nil {
-            self.userData.shops[self.shopIndex].isFavourite = true
-        } else {
-            self.userData.shops[self.shopIndex].isFavourite?.toggle()
-        }
     }
 }
 

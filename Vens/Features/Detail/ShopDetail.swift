@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+//import RealmSwift
 
 struct ShopDetail: View {
     
@@ -159,10 +160,17 @@ struct ShopDetail: View {
     }
     
     func toggleFav() {
+//        let realm = try! Realm()
         if self.userData.shops[self.shopIndex].isFavourite == nil {
-            self.userData.shops[self.shopIndex].isFavourite = true
+            print(self.userData.shops[self.shopIndex].isFavourite)
+//            try! realm.write {
+                self.userData.shops[self.shopIndex].isFavourite = true
+//            }
+            print(self.userData.shops[self.shopIndex].isFavourite)
         } else {
-            self.userData.shops[self.shopIndex].isFavourite?.toggle()
+//            try! realm.write {
+                self.userData.shops[self.shopIndex].isFavourite?.toggle()
+//            }
         }
     }
 }

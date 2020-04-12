@@ -11,38 +11,46 @@ import MapKit
 
 struct MapView: UIViewRepresentable {
     
+    @ObservedObject var locationManager = LocationManager()
     @Binding var centerCoordinate: CLLocationCoordinate2D
     var annotations: [MKPointAnnotation]
-    var annotationsDidUpdate: Bool = false
+    
+    @Binding var selectedPlace: MKPointAnnotation?
+    @Binding var showingPlaceDetails: Bool
+    @State var isActive: Bool = false
     
     func makeUIView(context: Context) -> MKMapView {
-        let span = MKCoordinateSpan(latitudeDelta: 0.025, longitudeDelta: 0.025)
-        let region = MKCoordinateRegion(center: centerCoordinate, span: span)
-        
+            
         let mView = MKMapView(frame: .zero)
-        mView.setRegion(region, animated: true)
-        
+        mView.delegate = context.coordinator
+        DispatchQueue.main.async {
+            mView.addAnnotations(self.annotations)
+        }
         return mView
     }
     
     func updateUIView(_ view: MKMapView, context: Context) {
         
-        if annotationsDidUpdate {
-            view.removeAnnotations(view.annotations)
-            view.addAnnotations(annotations)
+        view.showsUserLocation = true
+        let locationManager = CLLocationManager()
+        let status = CLLocationManager.authorizationStatus()
+        locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
+
+        if status == .authorizedAlways || status == .authorizedWhenInUse {
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+            let location: CLLocationCoordinate2D = locationManager.location!.coordinate
+            let span = MKCoordinateSpan(latitudeDelta: 0.009, longitudeDelta: 0.009)
+            let region = MKCoordinateRegion(center: location, span: span)
+            view.setRegion(region, animated: true)
         }
-        
-//        let coordinate = CLLocationCoordinate2D(
-//            latitude: 41.395171, longitude: 2.162058)
-//        let span = MKCoordinateSpan(latitudeDelta: 0.025, longitudeDelta: 0.025)
-//        let region = MKCoordinateRegion(center: coordinate, span: span)
-//        uiView.setRegion(region, animated: true)
     }
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
-
+    
     class Coordinator: NSObject, MKMapViewDelegate {
         var parent: MapView
 
@@ -51,46 +59,54 @@ struct MapView: UIViewRepresentable {
         }
         
         func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
-            parent.centerCoordinate = mapView.centerCoordinate
+            
         }
         
         func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
             
-            print("Did select annotation")
+//            parent.userData.selectedAnnotation = view.annotation
             
         }
         
-//        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-//            // this is our unique identifier for view reuse
-//            let identifier = "Placemark"
-//
-//            // attempt to find a cell we can recycle
-//            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-//
-//            if annotationView == nil {
-//                // we didn't find one; make a new one
-//                annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-//
-//                // allow this to show pop up information
-//                annotationView?.canShowCallout = true
-//
-//                // attach an information button to the view
-//                annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-//            } else {
-//                // we have a view to reuse, so give it the new annotation
-//                annotationView?.annotation = annotation
+        func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+            
+//            if mapView.selectedAnnotations.isEmpty {
+//                parent.userData.selectedAnnotation = nil
 //            }
-//
-//            // whether it's a new view or a recycled one, send it back
-//            return annotationView
-//        }
+        }
         
-//        func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-//            guard let placemark = view.annotation as? MKPointAnnotation else { return }
-//
-//            parent.selectedPlace = placemark
-//            parent.showingPlaceDetails = true
-//        }
+        
+        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            // this is our unique identifier for view reuse
+
+            // attempt to find a cell we can recycle
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+
+            if annotationView == nil {
+                // we didn't find one; make a new one
+                annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+
+                // allow this to show pop up information
+                annotationView?.canShowCallout = true
+
+                // attach an information button to the view
+                annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            } else {
+                // we have a view to reuse, so give it the new annotation
+                annotationView?.annotation = annotation
+            }
+
+            // whether it's a new view or a recycled one, send it back
+            return annotationView
+        }
+        
+        func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+            guard let placemark = view.annotation as? MKPointAnnotation else { return }
+            
+            parent.selectedPlace = placemark
+            parent.showingPlaceDetails = true
+
+        }
     }
     
     
@@ -99,7 +115,7 @@ struct MapView: UIViewRepresentable {
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView(centerCoordinate: .constant(MKPointAnnotation.example.coordinate), annotations: [MKPointAnnotation.example])
+        MapView(centerCoordinate: .constant(MKPointAnnotation.example.coordinate),  annotations: [MKPointAnnotation.example], selectedPlace: .constant(MKPointAnnotation.example), showingPlaceDetails: .constant(false))
     }
 }
 
