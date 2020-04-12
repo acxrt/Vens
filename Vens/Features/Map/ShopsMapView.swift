@@ -20,8 +20,14 @@ struct ShopsMapView: View {
         
         NavigationView{
             ZStack {
-                MapView(centerCoordinate: $centerCoordinate, annotations: userData.shops.filter{$0.id%7 == 0}.map{$0.annotation}, selectedPlace: $selectedPlace, showingPlaceDetails: $showingPlaceDetails)
-                
+                Group {
+                    NavigationLink(destination: ShopDetail(shop: userData.shops[0]), isActive: self.$showingPlaceDetails) {
+                        EmptyView()
+                    }
+                    
+                    MapView(centerCoordinate: $centerCoordinate, annotations: userData.shops.filter{$0.id%7 == 0}.map{$0.annotation}, selectedPlace: $selectedPlace, showingPlaceDetails: $showingPlaceDetails)
+                    
+                }
                 
                 //                userData.shops.map{$0.annotation}
                 
