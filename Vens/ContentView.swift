@@ -15,7 +15,6 @@ struct ContentView: View {
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor.white
-        UINavigationBar.appearance().backgroundColor = UIColor.white
     }
 
     

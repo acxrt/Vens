@@ -15,13 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-//        UINavigationBar.appearance().backgroundColor = UIColor.white
-                //Use this if NavigationBarTitle is with Large Font
+    
         UINavigationBar.appearance().largeTitleTextAttributes = [.font: UIFont(name: "VAGRoundedStd-Bold", size: 32) as Any]
-
-        //Use this if NavigationBarTitle is with displayMode = .inline
         UINavigationBar.appearance().titleTextAttributes = [.font: UIFont(name: "VAGRoundedStd-Bold", size: 24) as Any]
+        
         return true
     }
 
