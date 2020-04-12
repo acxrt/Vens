@@ -16,7 +16,7 @@
 		DD393D262443618800DC6273 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD393D252443618800DC6273 /* LocationManager.swift */; };
 		DD393D272443740500DC6273 /* Pods_Vens.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD409D3EEB860F43F5A482D /* Pods_Vens.framework */; };
 		DD393D282443740500DC6273 /* Pods_Vens.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBD409D3EEB860F43F5A482D /* Pods_Vens.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DD393D2D244386E300DC6273 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD393D2C244386E300DC6273 /* GoogleService-Info.plist */; };
+		DD393D2F2443918E00DC6273 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD393D2E2443918E00DC6273 /* GoogleService-Info.plist */; };
 		DD7DCA7C2440CF9100AD4D15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7DCA7B2440CF9100AD4D15 /* AppDelegate.swift */; };
 		DD7DCA7E2440CF9100AD4D15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7DCA7D2440CF9100AD4D15 /* SceneDelegate.swift */; };
 		DD7DCA802440CF9100AD4D15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7DCA7F2440CF9100AD4D15 /* ContentView.swift */; };
@@ -91,7 +91,7 @@
 		DD3615D0244221D700ECB0A9 /* Shops_BCN.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Shops_BCN.json; sourceTree = "<group>"; };
 		DD3615D2244273C800ECB0A9 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
 		DD393D252443618800DC6273 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		DD393D2C244386E300DC6273 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DD393D2E2443918E00DC6273 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DD7DCA782440CF9100AD4D15 /* Vens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7DCA7B2440CF9100AD4D15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD7DCA7D2440CF9100AD4D15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 		DD7DCA6F2440CF9100AD4D15 = {
 			isa = PBXGroup;
 			children = (
-				DD393D2C244386E300DC6273 /* GoogleService-Info.plist */,
+				DD393D2E2443918E00DC6273 /* GoogleService-Info.plist */,
 				DD7DCA7A2440CF9100AD4D15 /* Vens */,
 				DD7DCA912440CF9400AD4D15 /* VensTests */,
 				DD7DCA9C2440CF9400AD4D15 /* VensUITests */,
@@ -464,7 +464,7 @@
 			files = (
 				DDE4798F2440E7D6006B1208 /* Localizable.strings in Resources */,
 				DDE479A424411EA3006B1208 /* VAGRoundedStd-Bold.otf in Resources */,
-				DD393D2D244386E300DC6273 /* GoogleService-Info.plist in Resources */,
+				DD393D2F2443918E00DC6273 /* GoogleService-Info.plist in Resources */,
 				DD7DCA882440CF9400AD4D15 /* LaunchScreen.storyboard in Resources */,
 				DD7DCA852440CF9400AD4D15 /* Preview Assets.xcassets in Resources */,
 				DD7DCA822440CF9400AD4D15 /* Assets.xcassets in Resources */,
@@ -801,14 +801,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Vens/Preview Content\"";
-				DEVELOPMENT_TEAM = 57WMUP5HR3;
+				DEVELOPMENT_TEAM = 8TP45QWH7P;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Vens/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ainacuxart.prov.Vens.Vens;
+				PRODUCT_BUNDLE_IDENTIFIER = com.basetis.vens;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -822,14 +822,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Vens/Preview Content\"";
-				DEVELOPMENT_TEAM = 57WMUP5HR3;
+				DEVELOPMENT_TEAM = 8TP45QWH7P;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Vens/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ainacuxart.prov.Vens.Vens;
+				PRODUCT_BUNDLE_IDENTIFIER = com.basetis.vens;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
