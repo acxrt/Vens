@@ -8,30 +8,54 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     @State private var selection = 0
- 
+    
+    
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.white
+    }
+
+    
     var body: some View {
+        
         TabView(selection: $selection){
-            Text("First View")
+            ShopList()
                 .font(.title)
                 .tabItem {
                     VStack {
-                        Image("first")
-                        Text("First")
+                        Image("icList")
+                        .renderingMode(.template)
+                        .foregroundColor(Color.vensLightPurple)
                     }
                 }
                 .tag(0)
-            Text("Second View")
+            ShopsMapView()
+//                .edgesIgnoringSafeArea(.top)
                 .font(.title)
                 .tabItem {
                     VStack {
-                        Image("second")
-                        Text("Second")
+                        Image("location_grey")
+                        .renderingMode(.template)
+                        .foregroundColor(Color.vensLightPurple)
                     }
                 }
                 .tag(1)
-        }
+            FavouritesList()
+            .font(.title)
+            .tabItem {
+                VStack {
+                    Image("icFavourites")
+                    .renderingMode(.template)
+                    .foregroundColor(Color.vensLightPurple)
+                }
+            }
+            .tag(2)
+            }
+            .accentColor(Color.vensDarkPurple)
+        
+        
     }
 }
 

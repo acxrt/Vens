@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  Vens
+
+  Created by Albert on 10/04/2020.
+  Copyright © 2020 Aina Cuxart. All rights reserved.
+*/
+
+
+"shops" = "Shops";
+"filters" = "Filters";
+"skip" = "Skip";
+"favourites" = "Favourites";
+"emptyFavsTitle" = "Encara no tens favorits";
+"emptyFavsText" = "Descobreix els teus comerços favorits i guarda'ls per trobar-los fàcilment";
+"Alimentacio" = "Food";
+"Quotidia" = "Quotidià";
+"OciCultura" = "Oci i cultura";
+"Galeria" = "Galeria";
+"CentreComercial" = "Centre comercial";
+"Serveis" = "Serveis";
+"Llar" = "Llar";
+"Bellesa" = "Bellesa";
+"Mercat" = "Mercat";
+"Moda" = "Moda";
+"Altres" = "Altres";
+"open" = "Open";
+"closed" = "Closed";
+"unkownDistance" = "Unkown distance";
