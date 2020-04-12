@@ -14,8 +14,6 @@
 		DD3615D1244221D800ECB0A9 /* Shops_BCN.json in Resources */ = {isa = PBXBuildFile; fileRef = DD3615D0244221D700ECB0A9 /* Shops_BCN.json */; };
 		DD3615D3244273C800ECB0A9 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3615D2244273C800ECB0A9 /* ViewModifier.swift */; };
 		DD393D262443618800DC6273 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD393D252443618800DC6273 /* LocationManager.swift */; };
-		DD393D272443740500DC6273 /* Pods_Vens.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD409D3EEB860F43F5A482D /* Pods_Vens.framework */; };
-		DD393D282443740500DC6273 /* Pods_Vens.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBD409D3EEB860F43F5A482D /* Pods_Vens.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DD393D2F2443918E00DC6273 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD393D2E2443918E00DC6273 /* GoogleService-Info.plist */; };
 		DD7DCA7C2440CF9100AD4D15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7DCA7B2440CF9100AD4D15 /* AppDelegate.swift */; };
 		DD7DCA7E2440CF9100AD4D15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7DCA7D2440CF9100AD4D15 /* SceneDelegate.swift */; };
@@ -70,7 +68,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DD393D282443740500DC6273 /* Pods_Vens.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,14 +130,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DD7DCA752440CF9100AD4D15 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD393D272443740500DC6273 /* Pods_Vens.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DD7DCA8B2440CF9400AD4D15 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -359,7 +348,6 @@
 			buildPhases = (
 				45581FF20DE3FE68F735F10B /* [CP] Check Pods Manifest.lock */,
 				DD7DCA742440CF9100AD4D15 /* Sources */,
-				DD7DCA752440CF9100AD4D15 /* Frameworks */,
 				DD7DCA762440CF9100AD4D15 /* Resources */,
 				5DD7C96E01185571DD99CE9B /* [CP] Embed Pods Frameworks */,
 				DD393D292443740500DC6273 /* Embed Frameworks */,
