@@ -12,6 +12,11 @@ struct ShopList: View {
     
     @EnvironmentObject var userData: UserData
     
+    init() {
+        UITableView.appearance().backgroundColor = UIColor.clear
+        UITableViewCell.appearance().selectionStyle = .none
+    }
+    
     var body: some View {
         
         NavigationView {
@@ -23,7 +28,7 @@ struct ShopList: View {
                         NavigationLink(destination: ShopDetail(shop: shop)) {
                                 EmptyView()
                         }.buttonStyle(PlainButtonStyle())
-                    }
+                    }.listRowBackground(Color.clear)
                 }
             }
             .listSeparatorStyleNone()

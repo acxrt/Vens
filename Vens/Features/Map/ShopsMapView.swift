@@ -21,7 +21,7 @@ struct ShopsMapView: View {
                             Text("filters")
                                 .modifier(TextLabel())
                             Spacer()
-                            Image("first")
+                            Image("icFilter")
                                 .font(.title)
                         }
                         .padding(.horizontal, 15)

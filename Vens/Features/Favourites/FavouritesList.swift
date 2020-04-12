@@ -11,22 +11,31 @@ import SwiftUI
 struct FavouritesList: View {
     @EnvironmentObject var userData: UserData
     
+    init() {
+        UITableView.appearance().backgroundColor = UIColor.clear
+        UITableViewCell.appearance().selectionStyle = .none
+    }
+    
     var body: some View {
         
         NavigationView {
             if hasFavourites() {
                 List(userData.shops.filter({$0.isFavourite ?? false})) { shop in
                     if shop.isFavourite ?? false {
-                        NavigationLink(destination: ShopDetail(shop: shop)) {
+                        ZStack {
                             ShopRow(shop: shop)
-                        }
+                            NavigationLink(destination: ShopDetail(shop: shop)) {
+                                    EmptyView()
+                            }.buttonStyle(PlainButtonStyle())
+                        }.listRowBackground(Color.clear)
                     }
                 }
+                .listSeparatorStyleNone()
                 .navigationBarTitle("favourites")
                 Spacer()
             } else {
                 VStack(spacing: 45){
-                    Image("noFavourites")
+                    Image("noFavouritesIlustration")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: nil, height: 300.0)

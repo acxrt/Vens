@@ -40,14 +40,15 @@ struct ShopDetail: View {
                         if self.userData.shops[self.shopIndex].isFavourite ?? false {
                             Image("favouriteIcon")
                                 .resizable()
+                                .renderingMode(.template)
                                 .aspectRatio(contentMode: .fit)
+                                .foregroundColor(Color.vensDarkPurple)
                                 .frame(width: 25, height: 25)
                             
                         } else {
                             Image("favouriteIcon")
                                 .resizable()
-                                .renderingMode(.template)
-                               .aspectRatio(contentMode: .fit) .foregroundColor(Color.vensDarkPurple)
+                                .aspectRatio(contentMode: .fit)
                                 .frame(width: 25, height: 25)
                         }
                     }.frame(width: 50, height: 50)
